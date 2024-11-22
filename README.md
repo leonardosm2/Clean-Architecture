@@ -27,7 +27,7 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
 
 ### REST API
 - Para criar uma order, envie uma requisição `POST` para `http://localhost:8000/order`, use o modelo disponível em `api/create_order.http`.
-- Para listar as orders, envie uma requisição `GET` para `http://localhost:8000/order`, use o modelo disponível em `api/list_orders.http`.
+- Para listagem das orders, envie uma requisição `GET` para `http://localhost:8000/order`, use o modelo disponível em `api/list_orders.http`.
 
 ### gRPC
 - Utilize um cliente como [Evans](https://github.com/ktr0731/evans).
@@ -48,10 +48,10 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
 
 ### GraphQL
 - Acesse o playground GraphQL em `http://localhost:8080`.
-- Para criar uma order, utilize a seguinte mutation:
+- Para criar uma order, utilize a seguinte mutation (ajuste os valores de input):
     ```graphql
     mutation createOrder {
-        createOrder(input: {id: "cc", Price: 10, Tax: 2}){
+        createOrder(input: {id: "b", Price: 10, Tax: 2}){
             id
             Price
             Tax
@@ -60,7 +60,7 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
     }
     ```
 
-- Para listar as orders, utilize a query:
+- Para listagem das orders, utilize a query:
     ```graphql
     query listOrders {
         listOrders {
