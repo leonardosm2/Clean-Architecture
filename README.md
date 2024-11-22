@@ -8,10 +8,16 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
 
 1. Certifique-se de ter o Docker e o Go instalados.
 2. Suba os containers necessários executando o comando:
+    ```bash
     docker-compose up -d
+    ```
+
 3. Navegue até o diretório cmd/ordersystem 
 4. Compile e execute o código Go com o comando:
+    ```bash
     go run main.go wire_gen.go
+    ```
+
 4. Pronto! A aplicação estará rodando nas seguintes portas:
    - REST API: **Porta 8000**
    - gRPC: **Porta 50051**
@@ -20,8 +26,8 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
 ## Testando a aplicação
 
 ### REST API
-- Para criar uma order, envie uma requisição `POST` para `http://localhost:8000/order`, use o modelo disponível em api/create_order.http.
-- Para listar as orders, envie uma requisição `GET` para `http://localhost:8000/order`, use o modelo disponível em api/list_orders.http.
+- Para criar uma order, envie uma requisição `POST` para `http://localhost:8000/order`, use o modelo disponível em `api/create_order.http`.
+- Para listar as orders, envie uma requisição `GET` para `http://localhost:8000/order`, use o modelo disponível em `api/list_orders.http`.
 
 ### gRPC
 - Utilize um cliente como [Evans](https://github.com/ktr0731/evans).
@@ -31,14 +37,19 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
     ```
 
 - Criação da order:
+    ```bash
     call CreateOrder
+    ```
 
 - Listagem das orders:
+    ```bash
     Call ListOrders
+    ```
 
 ### GraphQL
 - Acesse o playground GraphQL em `http://localhost:8080`.
 - Para criar uma order, utilize a seguinte mutation:
+    ```graphql
     mutation createOrder {
         createOrder(input: {id: "cc", Price: 10, Tax: 2}){
             id
@@ -47,7 +58,10 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
             FinalPrice
         }
     }
+    ```
+
 - Para listar as orders, utilize a query:
+    ```graphql
     query listOrders {
         listOrders {
             id
@@ -56,6 +70,7 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
             FinalPrice
         }
     }
+    ```
 
 ## Observações
 
