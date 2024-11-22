@@ -47,7 +47,7 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
     ```
 
 ### GraphQL
-- Acesse o playground GraphQL em `http://localhost:8080`.
+- Acesse o playground do GraphQL em `http://localhost:8080`.
 - Para criar uma order, utilize a seguinte mutation (ajuste os valores de input):
     ```graphql
     mutation createOrder {
