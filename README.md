@@ -26,7 +26,9 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
 ### gRPC
 - Utilize um cliente como [Evans](https://github.com/ktr0731/evans).
 - Execute os comandos (para Evans):
+    ```bash
     evans -r repl --host localhost --port 50051
+    ```
 
 - Criação da order:
     call CreateOrder
