@@ -43,7 +43,7 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
 
 - Listagem das orders:
     ```bash
-    Call ListOrders
+    call ListOrders
     ```
 
 ### GraphQL
