@@ -9,15 +9,9 @@ A aplicação possui duas funcionalidades principais: criar order (com calculo d
 1. Certifique-se de ter o Docker e o Go instalados.
 2. Suba os containers necessários executando o comando:
     ```bash
-    docker-compose up -d
+    docker-compose up
     ```
-
-3. Navegue até o diretório cmd/ordersystem 
-4. Compile e execute o código Go com o comando:
-    ```bash
-    go run main.go wire_gen.go
-    ```
-
+3. Ãguarde até que a mensagem de que a aplicação está rodando nas três portas seja exibida nos logs.
 4. Pronto! A aplicação estará rodando nas seguintes portas:
    - REST API: **Porta 8000**
    - gRPC: **Porta 50051**
